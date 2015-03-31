@@ -23,20 +23,25 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">First Name</label>
+
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="firstName" value="{{ old('firstName') }}">
+                                    <input type="text" class="form-control" name="firstName"
+                                           value="{{ old('firstName') }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Last Name</label>
+
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="lastName" value="{{ old('lastName') }}">
+                                    <input type="text" class="form-control" name="lastName"
+                                           value="{{ old('lastName') }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">E-Mail Address</label>
+
                                 <div class="col-md-6">
                                     <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                                 </div>
@@ -44,13 +49,16 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Date of Birth</label>
+
                                 <div class="col-md-6">
-                                    <input type="date" class="form-control" name="dateOfBirth" value="{{ old('dateOfBirth') }}">
+                                    <input type="date" class="form-control" name="dateOfBirth"
+                                           value="{{ old('dateOfBirth') }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Address</label>
+
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="address" value="{{ old('address') }}">
                                 </div>
@@ -58,6 +66,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Town</label>
+
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="town" value="{{ old('town') }}">
                                 </div>
@@ -65,20 +74,25 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Post Code</label>
+
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="postCode" value="{{ old('postCode') }}">
+                                    <input type="text" class="form-control" name="postCode"
+                                           value="{{ old('postCode') }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Phone Number</label>
+
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="phoneNumber" value="{{ old('phoneNumber') }}">
+                                    <input type="text" class="form-control" name="phoneNumber"
+                                           value="{{ old('phoneNumber') }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Password</label>
+
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password">
                                 </div>
@@ -86,6 +100,7 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Confirm Password</label>
+
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password_confirmation">
                                 </div>
@@ -93,9 +108,14 @@
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">I am a...</label>
+
                                 <div class="col-md-6">
-                                    <input type="radio" class="" name="role" value="Consumer">Consumer</input>
-                                    <input type="radio" class="" name="role" value="Engineer">Engineer</input>
+                                    <div class="radio">
+                                        <label><input type="radio" name="role">Consumer</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="role">Engineer</label>
+                                    </div>
                                 </div>
                             </div>
 

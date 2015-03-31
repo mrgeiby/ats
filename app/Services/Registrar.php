@@ -24,6 +24,7 @@ class Registrar implements RegistrarContract {
             'phoneNumber' => 'required|min:11|max:13',
 			'email' => 'required|email|max:255|unique:users',
 			'password' => 'required|confirmed|min:6',
+            'role' => 'required',
 		]);
 	}
 
