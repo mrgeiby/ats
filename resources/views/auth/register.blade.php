@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Confirm Passwordssss</label>
+                                <label class="col-md-4 control-label">Confirm Password</label>
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password_confirmation">
                                 </div>
@@ -94,7 +94,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">I am a...</label>
                                 <div class="col-md-6">
-                                    <input type="radio" class="" name="role" value="Consumer">Consumersss</input>
+                                    <input type="radio" class="" name="role" value="Consumer">Consumer</input>
                                     <input type="radio" class="" name="role" value="Engineer">Engineer</input>
                                 </div>
                             </div>
