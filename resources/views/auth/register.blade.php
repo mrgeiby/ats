@@ -111,10 +111,10 @@
 
                                 <div class="col-md-6">
                                     <div class="radio">
-                                        <label><input type="radio" name="role">Consumer</label>
+                                        <label><input type="radio" name="role" value="4">Consumer</label>
                                     </div>
                                     <div class="radio">
-                                        <label><input type="radio" name="role">Engineer</label>
+                                        <label><input type="radio" name="role" value="3">Engineer</label>
                                     </div>
                                 </div>
                             </div>
