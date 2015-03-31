@@ -97,7 +97,6 @@
                                     <input type="radio" class="" name="role" value="Consumer">Consumer</input>
                                     <input type="radio" class="" name="role" value="Engineer">Engineer</input>
                                 </div>
-
                             </div>
 
                             <div class="form-group">
