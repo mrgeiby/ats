@@ -46,11 +46,7 @@ class UserController extends Controller {
 	 */
 	public function show()
 	{
-//		$data = User::find(Auth::user()->id)->first();
         $data = User::where('id', '=', Auth::user()->id)->first();
-//        $data = array(
-//            'firstName' => 'Test'
-//        );
         return view('user.show', compact('data'));
 	}
 
@@ -60,7 +56,7 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
 		//
 	}

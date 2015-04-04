@@ -80,14 +80,13 @@
                                 </div>
                             </div>
 
-                            {{--<div class="form-group">--}}
-                                {{--<label class="col-md-4 control-label">User Role</label>--}}
-                                {{--<div class="col-md-6">--}}
-                                    {{--<input type="text" class="form-control" name="role" value="{{ Auth::user()->role->roleName }}" readonly>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">User Type</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="role" value="{{ $data->role->name }}" readonly>
+                                </div>
+                            </div>
                         </form>
-
                     </div>
                 </div>
             </div>
