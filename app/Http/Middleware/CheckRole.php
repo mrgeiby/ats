@@ -22,6 +22,7 @@ class CheckRole {
         {
             return $next($request);
         }
+        echo "FAILED";
         abort(404);
     }
 
