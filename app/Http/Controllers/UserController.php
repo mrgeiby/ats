@@ -58,7 +58,8 @@ class UserController extends Controller {
 	 */
 	public function edit()
 	{
-		//
+        $data = User::where('id', '=', Auth::user()->id)->first();
+        return view('user.edit', compact('data'));
 	}
 
 	/**
