@@ -9,7 +9,7 @@
                     <div class="panel-heading">Unauthorised</div>
 
                     <div class="panel-body">
-                        You are not authorised to access this page! Redirecting you home!
+                        You are not authorised to access this page! Redirecting you to the homepage!
                     </div>
                 </div>
             </div>
