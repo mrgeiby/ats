@@ -46,7 +46,8 @@ class UserController extends Controller {
 	 */
 	public function show()
 	{
-		$data = User::find(Auth::user()->id)->first();
+//		$data = User::find(Auth::user()->id)->first();
+        $data = User::find('id', '=', Auth::user()->id)->first();
         return view('user.show', compact('data'));
 	}
 
