@@ -2,9 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller {
 
