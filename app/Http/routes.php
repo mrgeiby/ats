@@ -15,13 +15,13 @@ Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('user/show', 'UserController@show');
+//Route::get('user/show', 'UserController@show');
 
-//Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer']), function () {
-//    Route::get('show', 'UserController@show');
-//    //Route::get('edit', 'UserController@edit');
-//    //Route::post('update', 'UserController@update');
-//});
+Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer']), function () {
+    Route::get('show', 'UserController@show');
+    //Route::get('edit', 'UserController@edit');
+    //Route::post('update', 'UserController@update');
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
