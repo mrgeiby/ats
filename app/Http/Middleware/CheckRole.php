@@ -22,9 +22,7 @@ class CheckRole {
         {
             return $next($request);
         }
-        echo "FAILED";
-        print_r($roles);
-        //abort(404);
+        abort(404);
     }
 
     private function getRequiredRoleForRoute($route)
