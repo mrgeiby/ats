@@ -68,10 +68,21 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(UserRequest $request)
 	{
-		//
-	}
+        $data = $request->all();
+        $user = User::where('id', '=', Auth::user()->id)->first();
+        $user->firstName = $data['firstName'];
+        $user->lastName = $data['lastName'];
+        $user->dob = $data['dateOfBirth'];
+        $user->address = $data['address'];
+        $user->town = $data['town'];
+        $user->postCode = $data['postCode'];
+        $user->phoneNumber = $data['phoneNumber'];
+        $user->save();
+        return redirect('user/edit')->with('success', 'Account updated successfully!');
+
+    }
 
 	/**
 	 * Remove the specified resource from storage.
