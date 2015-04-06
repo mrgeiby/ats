@@ -15,9 +15,6 @@ Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-//Route::get('user/show', 'UserController@show');
-//Route::get('user/edit', 'UserController@edit');
-
 Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer']), function () {
     Route::get('show', 'UserController@show');
     Route::get('edit', 'UserController@edit');
