@@ -48,7 +48,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Date of Birth</label>
                                 <div class="col-md-6">
-                                    <input type="date" class="form-control" name="dateOfBirth" value="{{ $data['dob'] }}">
+                                    <input type="date" class="form-control" name="dateOfBirth" value="{{ $data['dob'] }}" readonly>
                                 </div>
                             </div>
 
