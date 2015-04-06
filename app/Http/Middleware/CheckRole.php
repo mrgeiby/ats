@@ -23,7 +23,7 @@ class CheckRole {
             return $next($request);
         }
         echo "FAILED";
-        print_r($request->user());
+        print_r($roles);
         //abort(404);
     }
 
