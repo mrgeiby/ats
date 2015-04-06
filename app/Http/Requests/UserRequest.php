@@ -30,7 +30,6 @@ class UserRequest extends Request {
             'dateOfBirth' => 'required|date',
             'phoneNumber' => 'required|min:11|max:13',
             'email' => 'required|email|max:255',
-            'password' => 'required|confirmed|min:6',
             'role' => 'required',
 		];
 	}
