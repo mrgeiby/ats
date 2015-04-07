@@ -16,8 +16,9 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		//
-	}
+        $data = User::paginate(5);
+        return view('user.index', compact('data'));
+    }
 
 	/**
 	 * Show the form for creating a new resource.

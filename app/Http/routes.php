@@ -21,6 +21,10 @@ Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles
     Route::post('update', 'UserController@update');
 });
 
+Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['administrator']), function () {
+    Route::get('/ ', 'UserController@show');
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
