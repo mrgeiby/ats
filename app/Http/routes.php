@@ -15,14 +15,14 @@ Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer']), function () {
+Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer', 'administrator']), function () {
     Route::get('show', 'UserController@show');
     Route::get('edit', 'UserController@edit');
     Route::post('update', 'UserController@update');
 });
 
-Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles' => ['administrator']), function () {
-    Route::get('/ ', 'UserController@show');
+Route::group(array('prefix' => 'users', 'middleware' => ['auth', 'roles'], 'roles' => ['administrator']), function () {
+    Route::get('/', 'UserController@index');
 });
 
 Route::controllers([
