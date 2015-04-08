@@ -54,6 +54,8 @@
 
                             @if(Auth::user()->hasRole('Engineer'))
                                 <li class="divider"></li>
+                                <li><a href="{{ url('/engineer/edit') }}">View Profile</a></li>
+                                <li><a href="{{ url('/engineer/edit') }}">Manage Profile</a></li>
                             @endif
 
                             @if(Auth::user()->hasRole('Administrator'))
