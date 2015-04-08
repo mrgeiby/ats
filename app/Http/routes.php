@@ -30,6 +30,10 @@ Route::group(array('prefix' => 'users', 'middleware' => ['auth', 'roles'], 'role
     Route::get('destroy/{id}', 'UserController@destroy');
 });
 
+Route::group(array('prefix' => 'engineers', 'middleware' => ['auth', 'roles'], 'roles' => ['consumer', 'engineer', 'administrator']), function () {
+    Route::get('', 'EngineerController@index');
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
