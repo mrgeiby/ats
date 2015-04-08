@@ -51,8 +51,8 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->role->name }}</td>
                                     <td>
-                                        {{--{!! HTML::linkAction('UserController@edit', 'Edit',--}}
-                                        {{--$user->id, 'class="btn btn-primary"') !!}--}}
+                                        {!! HTML::linkAction('UserController@modify', 'Edit',
+                                        $user->id, 'class="btn btn-primary"') !!}
                                         {{--{!! HTML::linkAction('UserController@destroy', 'Delete',--}}
                                         {{--$user->id, 'class="btn btn-danger"') !!}--}}
                                     </td>

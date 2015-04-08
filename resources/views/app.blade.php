@@ -47,7 +47,16 @@
 							<ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/user/show') }}">View Account</a></li>
                                 <li><a href="{{ url('/user/edit') }}">Edit Account</a></li>
-                                <li><a href="{{ url('/users') }}">Manage Users</a></li>
+
+                                @if(Auth::user()->hasRole('Administrator'))
+                                    <li class="divider"></li>
+                                    <li><a href="{{ url('/users') }}">Manage Users</a></li>
+                                @endif
+
+                                @if(Auth::user()->hasRole('Engineer'))
+                                    <li class="divider"></li>
+                                @endif
+
                                 <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 							</ul>
 						</li>

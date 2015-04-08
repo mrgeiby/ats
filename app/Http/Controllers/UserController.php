@@ -18,6 +18,7 @@ class UserController extends Controller {
 	public function index()
 	{
         $data = User::paginate(5);
+        $data->setPath('users');
         return view('user.index', compact('data'));
     }
 
@@ -77,6 +78,28 @@ class UserController extends Controller {
         $data = User::where('id', '=', Auth::user()->id)->first();
         return view('user.edit', compact('data'));
 	}
+
+    public function modify($id)
+    {
+        $data = User::where('id', '=', $id)->first();
+        return view('user.modify', compact('data'));
+    }
+
+    public function saveModify(UserRequest $request)
+    {
+        $data = $request->all();
+        $user = User::where('id', '=', $data['id'])->first();
+        $user->firstName = $data['firstName'];
+        $user->lastName = $data['lastName'];
+        $user->dob = $data['dateOfBirth'];
+        $user->address = $data['address'];
+        $user->town = $data['town'];
+        $user->postCode = $data['postCode'];
+        $user->phoneNumber = $data['phoneNumber'];
+        $user->save();
+        return redirect('users/')->with('success', 'Account updated successfully!');
+    }
+
 
 	/**
 	 * Update the specified resource in storage.

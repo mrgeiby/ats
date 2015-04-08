@@ -22,9 +22,11 @@ Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles
 });
 
 Route::group(array('prefix' => 'users', 'middleware' => ['auth', 'roles'], 'roles' => ['administrator']), function () {
-    Route::get('/', 'UserController@index');
+    Route::get('', 'UserController@index');
     Route::get('create', 'UserController@create');
     Route::post('store', 'UserController@store');
+    Route::get('edit/{id}', 'UserController@modify');
+    Route::post('modify', 'UserController@saveModify');
 
 });
 
