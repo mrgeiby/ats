@@ -36,11 +36,11 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Actions</th>
+                                <th class="col-md-1">ID</th>
+                                <th class="col-md-3">Name</th>
+                                <th class="col-md-3">Email</th>
+                                <th class="col-md-3">Role</th>
+                                <th class="col-md-2">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,8 +53,8 @@
                                     <td>
                                         {!! HTML::linkAction('UserController@modify', 'Edit',
                                         $user->id, 'class="btn btn-primary"') !!}
-                                        {{--{!! HTML::linkAction('UserController@destroy', 'Delete',--}}
-                                        {{--$user->id, 'class="btn btn-danger"') !!}--}}
+                                        {!! HTML::linkAction('UserController@destroy', 'Delete',
+                                        $user->id, 'class="btn btn-danger"') !!}
                                     </td>
                                 </tr>
                             @endforeach

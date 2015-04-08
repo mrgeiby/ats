@@ -131,7 +131,9 @@ class UserController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+        $data = User::where('id', '=', $id)->first();
+        $data->delete();
+        return redirect('users/')->with('success', 'Account deleted successfully!');
 	}
 
 }

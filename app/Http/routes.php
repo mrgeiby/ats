@@ -27,7 +27,7 @@ Route::group(array('prefix' => 'users', 'middleware' => ['auth', 'roles'], 'role
     Route::post('store', 'UserController@store');
     Route::get('edit/{id}', 'UserController@modify');
     Route::post('modify', 'UserController@saveModify');
-
+    Route::get('destroy/{id}', 'UserController@destroy');
 });
 
 Route::controllers([
