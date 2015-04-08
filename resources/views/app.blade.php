@@ -36,6 +36,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ url('/') }}">About Us</a></li>
+                <li><a href="{{ url('/') }}">Engineer Search</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
