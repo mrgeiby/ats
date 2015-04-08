@@ -1,5 +1,6 @@
 <?php namespace App\Services;
 
+use App\Engineer;
 use App\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
@@ -51,7 +52,10 @@ class Registrar implements RegistrarContract
         ]);
 
         if ($data['role'] == 3) {
-
+            $engineer = Engineer::create([
+                'rate' => '0.0',
+                'user_id' => $user->id,
+            ]);
         } else if ($data['role'] == 4) {
 
         }
