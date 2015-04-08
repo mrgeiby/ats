@@ -35,10 +35,23 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(UserRequest $request)
 	{
-		//
-	}
+        $data = $request->all();
+        $user = User::create([
+            'firstName' => $data['firstName'],
+            'lastName' => $data['lastName'],
+            'address' => $data['address'],
+            'town' => $data['town'],
+            'postCode' => $data['postCode'],
+            'dob' => $data['dateOfBirth'],
+            'phoneNumber' => $data['phoneNumber'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'role_id' => $data['role'],
+        ]);
+        return redirect('users/')->with('success', 'Account created successfully!');
+    }
 
 	/**
 	 * Display the specified resource.
