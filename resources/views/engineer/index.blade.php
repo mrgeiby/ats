@@ -57,17 +57,19 @@
                         @endif
                         <div id="productions">
                             @foreach ($data as $engineer)
-                                @if ($productionType->production->count() != 0)
-                                    <h1>{{ $productionType->prodType }}</h1>
-                                    <ul>
-                                        @foreach($productionType->production as $production)
-                                            <h3>{!! HTML::linkAction('ProductionController@show', $production->prodName,
-                                                $production->prodSlug) !!}</h3>
-                                            <i>Released: {{ $production->created_at }}</i>
-                                            <p>{{ $production->prodDescription }}</p>
-                                        @endforeach
-                                    </ul>
-                                @endif
+                                {{ $engineer->user->firstName }} {{ $engineer->user->lastName }} <br />
+                                {{ $engineer->rate }}
+                                {{--@if ($productionType->production->count() != 0)--}}
+                                    {{--<h1>{{ $productionType->prodType }}</h1>--}}
+                                    {{--<ul>--}}
+                                        {{--@foreach($productionType->production as $production)--}}
+                                            {{--<h3>{!! HTML::linkAction('ProductionController@show', $production->prodName,--}}
+                                                {{--$production->prodSlug) !!}</h3>--}}
+                                            {{--<i>Released: {{ $production->created_at }}</i>--}}
+                                            {{--<p>{{ $production->prodDescription }}</p>--}}
+                                        {{--@endforeach--}}
+                                    {{--</ul>--}}
+                                {{--@endif--}}
                             @endforeach
                         </div>
 
