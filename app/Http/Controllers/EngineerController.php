@@ -16,7 +16,7 @@ class EngineerController extends Controller {
 	public function index()
 	{
         $data = Engineer::paginate(10);
-        $data->setPath('users');
+        $data->setPath('engineers');
         return view('engineer.index', compact('data'));
 	}
 
