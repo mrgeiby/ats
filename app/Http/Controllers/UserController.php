@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\CreateUserRequest;
 use Auth;
 
 class UserController extends Controller {
@@ -35,7 +36,7 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(UserRequest $request)
+	public function store(CreateUserRequest $request)
 	{
         $data = $request->all();
         $user = User::create([
