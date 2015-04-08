@@ -23,6 +23,8 @@ Route::group(array('prefix' => 'user', 'middleware' => ['auth', 'roles'], 'roles
 
 Route::group(array('prefix' => 'users', 'middleware' => ['auth', 'roles'], 'roles' => ['administrator']), function () {
     Route::get('/', 'UserController@index');
+    Route::get('/create', 'UserController@create');
+
 });
 
 Route::controllers([

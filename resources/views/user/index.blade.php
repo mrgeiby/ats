@@ -29,7 +29,7 @@
                             </div>
                         @endif
                         <div class="text-right">
-                            <a href="{{ URL::action('UserController@index') }}" class="btn btn-success">
+                            <a href="{{ URL::action('UserController@create') }}" class="btn btn-success">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create User
                             </a>
                         </div>
